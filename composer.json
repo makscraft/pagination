@@ -6,12 +6,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Maxizdev\\Pagination\\": "src/"
+            "Maxizdev\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Maxizdev\\Pagination\\Tests\\": "tests/"
+            "Maxizdev\\Tests\\": "tests/"
         }
     },
     "authors": [
