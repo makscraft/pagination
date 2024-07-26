@@ -1,8 +1,8 @@
 <?php
-namespace Maxizdev\Pagination\Tests;
+namespace Maxizdev\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-use Maxizdev\Utils\Pagination;
+use Maxizdev\Pagination;
 
 class PaginationTest extends KernelTestCase
 {
@@ -104,7 +104,7 @@ class PaginationTest extends KernelTestCase
         self :: bootKernel();
         $container = self :: getContainer();
 
-        $html = $container -> get('twig') -> render('parts/pagination.html.twig', [
+        $html = $container -> get('twig') -> render('@pagination/pagination.html.twig', [
             'pagination' => $pagination
         ]);
         
