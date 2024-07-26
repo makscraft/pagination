@@ -1,0 +1,18 @@
+
+{% if pagination.hasPages() %}
+    {% set pagination_data = pagination.getDisplayData() %}    
+    <div class="pagination">
+        <div class="pages">
+            {% if pagination_data.prev_link %}
+                <a href="{{ pagination_data.prev_link }}" class="prev"></a>
+            {% endif %}
+            {% for item in pagination_data.pages %}
+                <a{{ item.number == pagination_data.active ? ' class="active"' : '' }} href="{{ item.url }}">{{ item.number }}</a>
+            {% endfor %}
+            {% if pagination_data.next_link %}
+                <a href="{{ pagination_data.next_link }}" class="next"></a>
+            {% endif %}            
+        </div>
+    </div>
+{% endif %}
+
