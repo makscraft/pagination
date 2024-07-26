@@ -1,0 +1,24 @@
+{
+    "name": "maxizdev/pagination",
+    "description": "Pagination manager for Symfony application.",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Maxizdev\\Pagination\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Maxizdev\\Pagination\\Tests\\": "tests/"
+        },
+    "authors": [
+        {
+            "name": "Maksim Zaykov",
+            "email": "Mszaykov@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
