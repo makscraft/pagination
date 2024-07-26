@@ -12,7 +12,8 @@
     "autoload-dev": {
         "psr-4": {
             "Maxizdev\\Pagination\\Tests\\": "tests/"
-        },
+        }
+    },
     "authors": [
         {
             "name": "Maksim Zaykov",
