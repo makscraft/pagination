@@ -1,5 +1,5 @@
 <?php
-namespace Maxizdev\Utils;
+namespace Maxizdev;
 
 use Symfony\Component\HttpFoundation\Request;
 
