@@ -92,12 +92,12 @@ class Pagination
         return $this -> total;
     }
 
-    public function getPages(): ?int
+    public function getPages(): int
     {
         return $this -> pages;
     }
 
-    public function getCurrent(): ?int
+    public function getCurrent(): int
     {
         return $this -> current;
     }
@@ -122,14 +122,14 @@ class Pagination
 		return $path.$this -> getUrlParams();
 	}
 
-    public function hasPages()
+    public function hasPages(): bool
     {
         return ($this -> pages > 1); 
     }
 
     public function getDisplayData(int $visible = 8): array
     {
-        if($this -> pages <= 1)
+        if(!$this -> hasPages())
             return [];
 
         $path = $this -> path.(strpos($this -> path, '?') === false ? '?page=' : '&page=');
