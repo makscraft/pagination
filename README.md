@@ -12,7 +12,7 @@ Example of use in controller or repository
 ---
 
 ```
-use Maxizdev\Pagination;
+use Rivacraft\Pagination;
 
 $total = ... ; //count your all needed items
 $limit = 20; //items per page
@@ -48,7 +48,7 @@ To use template from vendor directory add the path into twig config file.
 ```
 # config/packages/twig.yaml    
 paths:
-    'vendor/maxizdev/pagination/templates': 'pagination'
+    'vendor/rivacraft/pagination/templates': 'pagination'
 
 ```
 Next include the pagination template into your twig files.
@@ -58,4 +58,4 @@ Next include the pagination template into your twig files.
 
 Also you can copy the template file into your templates directory and use it as you like.
 
-Template file location: **vendor/maxizdev/pagination/templates/pagination.html.twig**
+Template file location: **vendor/rivacraft/pagination/templates/pagination.html.twig**
