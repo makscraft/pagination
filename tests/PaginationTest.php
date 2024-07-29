@@ -2,7 +2,7 @@
 namespace Maxizdev\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-use Maxizdev\Pagination;
+use Rivacraft\Pagination;
 
 class PaginationTest extends KernelTestCase
 {

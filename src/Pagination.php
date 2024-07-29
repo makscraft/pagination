@@ -1,5 +1,5 @@
 <?php
-namespace Maxizdev;
+namespace Rivacraft;
 
 use Symfony\Component\HttpFoundation\Request;
 

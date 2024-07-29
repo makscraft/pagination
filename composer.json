@@ -1,26 +1,29 @@
 {
-    "name": "maxizdev/pagination",
-    "description": "Pagination manager for Symfony application.",
+    "name": "rivacraft/pagination",
+    "description": "Pagination manager for Symfony applications.",
     "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Maxizdev\\": "src/"
+            "Rivacraft\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Maxizdev\\Tests\\": "tests/"
+            "Rivacraft\\Tests\\": "tests/"
         }
     },
     "authors": [
         {
-            "name": "Maksim Zaykov",
+            "name": "Maxim Zaykov",
             "email": "Mszaykov@gmail.com"
         }
     ],
     "require": {
         "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.4 || ^9.3"
     }
 }
