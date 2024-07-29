@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
  * 
  * (c) Maxim Zaykov <mszaykov@gmail.com>
  * 
+ * See examples at https://github.com/rivacraft/pagination
  */
 class Pagination
 {
