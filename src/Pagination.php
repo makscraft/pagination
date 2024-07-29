@@ -8,12 +8,8 @@ use Symfony\Component\HttpFoundation\Request;
  * Creates params for SQL queries to use in LIMIT/OFFSET constructions.
  * Also generates array of links to use in html templates.
  * 
- * /catalog?page=3
- * $pagination = new Pagination(100, 20);
- * $repository -> findBy([...], [...], $pagination -> getLimit(), $pagination -> getOffset());
+ * (c) Maxim Zaykov <mszaykov@gmail.com>
  * 
- * Array of links for html.
- * $pagination -> setPath('/catalog') -> getDisplayData();
  */
 class Pagination
 {
@@ -42,17 +38,26 @@ class Pagination
     private int $current = 0;
 
     /**
-     * Url to add pages GET params like '/catalog/new'
+     * Target url to add pages GET params like '/catalog/new'
      * @var string
      */
     private string $path = '';
 
+    /**
+     * Creates object
+     * @param int $total number of items (records, entities) 
+     * @param int $limit items per 1 page
+     */
     public function __construct(int $total = 0, int $limit = 0)
     {
         if($total > 0 && $limit > 0)
             $this -> run($total, $limit);
     }
 
+    /**
+     * Gets current page from GET if passed and runs pagination object.
+     * Needs Symfory Request class.
+     */
     public function run(int $total, int $limit): self
     {
         if($total <= 0 || $limit <= 0)
@@ -70,6 +75,9 @@ class Pagination
         return $this;
     }
 
+    /**
+     * Sets path (url) for adding pages to.
+     */
     public function setPath(string $path): self
     {
         $this -> path = $path;
@@ -77,41 +85,65 @@ class Pagination
         return $this;
     }
 
+    /**
+     * Gets current url of pagination.
+     */
     public function getPath(): string
     {
         return $this -> path;
     }
 
+    /**
+     * Returns limit of items per page.
+     */
     public function getLimit(): int
     {
         return $this -> limit;
     }
 
+    /**
+     * Returns total number of items in paginator.
+     */
     public function getTotal(): int
     {
         return $this -> total;
     }
 
+    /**
+     * Returns number of pages in paginator according to total and limit values.
+     */
     public function getPages(): int
     {
         return $this -> pages;
     }
 
+    /**
+     * Returns number of current page.
+     */
     public function getCurrent(): int
     {
         return $this -> current;
     }
 
+    /**
+     * Returns offset value for SQL query.
+     */
     public function getOffset(): int
     {
         return ($this -> current - 1) * $this -> limit;
     }
 
+    /**
+     * Returns url param with current page number to use it in urls.
+     */
     public function getUrlParams(): string
 	{	
 		return ($this -> current > 1) ? 'page='.$this -> current : '';
 	}
 
+    /**
+     * Adds current page to passed url.
+     */
     public function addUrlParams(string $path): string
 	{
 		if($this -> current <= 1)
@@ -122,11 +154,17 @@ class Pagination
 		return $path.$this -> getUrlParams();
 	}
 
+    /**
+     * Checks if paginator has the number of pages greater than 1.
+     */
     public function hasPages(): bool
     {
         return ($this -> pages > 1); 
     }
 
+    /**
+     * Returns set of values to display pagination links in html template.
+     */
     public function getDisplayData(int $visible = 8): array
     {
         if(!$this -> hasPages())
