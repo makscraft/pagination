@@ -1,5 +1,5 @@
 <?php
-namespace Maxizdev\Tests;
+namespace Rivacraft\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Rivacraft\Pagination;
