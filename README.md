@@ -1,7 +1,10 @@
 # Pagination
 Pagination manager for Symfony applications.
 
-Works with urls by adding the numbers of pages to them.
+Generates list of links and parameters for SQL queries.
+
+![pagination](https://github.com/user-attachments/assets/620c1f38-3b7d-4764-b186-38c5e2031e7c)
+
 
 Installation
 ---
