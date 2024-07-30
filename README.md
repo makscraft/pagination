@@ -8,8 +8,9 @@ Generates list of links and parameters for SQL queries.
 
 Installation
 ---
-
+```
 composer require makscraft/pagination
+```
 
 Example of use in controller or repository
 ---
