@@ -1,6 +1,7 @@
 {
     "name": "makscraft/pagination",
     "description": "Pagination manager for Symfony applications.",
+    "keywords": ["pagination", "Symfony"],
     "version": "1.0.0",
     "type": "library",
     "license": "MIT",
