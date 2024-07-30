@@ -1,17 +1,17 @@
 {
-    "name": "rivacraft/pagination",
+    "name": "makscraft/pagination",
     "description": "Pagination manager for Symfony applications.",
     "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Rivacraft\\": "src/"
+            "Makscraft\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Rivacraft\\Tests\\": "tests/"
+            "Makscraft\\Tests\\": "tests/"
         }
     },
     "authors": [

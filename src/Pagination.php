@@ -1,5 +1,5 @@
 <?php
-namespace Rivacraft;
+namespace Makscraft;
 
 use Symfony\Component\HttpFoundation\Request;
 
@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
  * 
  * (c) Maxim Zaykov <mszaykov@gmail.com>
  * 
- * See examples at https://github.com/rivacraft/pagination
+ * See examples at https://github.com/makscraft/pagination
  */
 class Pagination
 {

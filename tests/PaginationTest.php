@@ -1,8 +1,8 @@
 <?php
-namespace Rivacraft\Tests;
+namespace Makscraft\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-use Rivacraft\Pagination;
+use Makscraft\Pagination;
 
 class PaginationTest extends KernelTestCase
 {
